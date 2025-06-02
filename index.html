@@ -1,1 +1,303 @@
 
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clínica Modys</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('img/fondo.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      animation: fadeInDown 2s ease;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin-top: 15px;
+      animation: fadeInUp 2s ease;
+    }
+
+    nav {
+      background: #1976d2;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #1976d2;
+    }
+
+    .galeria img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .contacto form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .contacto input, .contacto textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .contacto button {
+      background: #1976d2;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+
+    .contacto button:hover {
+      background: #0d47a1;
+    }
+
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Clínica Modys</h1>
+      <p>Donde tu salud y bienestar son lo primero</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#quienes">Quiénes Somos</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#galeria">Instalaciones</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="quienes">
+  <h2 class="mb-5">Quiénes Somos</h2>
+  <div class="row justify-content-center text-center">
+    
+    <div class="col-md-3 col-sm-6 mb-5">
+      <div class="card border-0 shadow p-3 h-100">
+        <img src="img/ismael.png" alt="Ismael" class="rounded-circle mx-auto d-block" style="width: 180px; height: 180px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title mb-1">Ismael</h5>
+          <p class="text-muted">Fisioterapeuta</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 mb-5">
+      <div class="card border-0 shadow p-3 h-100">
+        <img src="img/borja.png" alt="Borja" class="rounded-circle mx-auto d-block" style="width: 180px; height: 180px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title mb-1">Borja</h5>
+          <p class="text-muted">Entrenador Personal</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 mb-5">
+      <div class="card border-0 shadow p-3 h-100">
+        <img src="img/ana.png" alt="Ana" class="rounded-circle mx-auto d-block" style="width: 180px; height: 180px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title mb-1">Ana</h5>
+          <p class="text-muted">Psicóloga</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card p-4 mb-4 shadow-sm">
+          <h3>Medicina General</h3>
+          <p>Consulta, diagnóstico y seguimiento continuo para tu bienestar.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 mb-4 shadow-sm">
+          <h3>Odontología</h3>
+          <p>Tratamientos dentales modernos, estética y ortodoncia.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 mb-4 shadow-sm">
+          <h3>Fisioterapia</h3>
+          <p>Rehabilitación física y alivio del dolor con técnicas profesionales.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 mb-4 shadow-sm">
+          <h3>Psicología</h3>
+          <p>Apoyo emocional, terapia individual, familiar y de pareja.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 mb-4 shadow-sm">
+          <h3>Nutrición</h3>
+          <p>Planes personalizados para una alimentación sana y equilibrada.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 mb-4 shadow-sm">
+          <h3>Laboratorio Clínico</h3>
+          <p>Resultados confiables y rápidos para tu diagnóstico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería de Instalaciones</h2>
+    <div class="galeria">
+      <img src="img/image.png" alt="Recepción">
+      <img src="Captura de pantalla 2025-06-02 125631.png" alt="Sala de espera">
+      <img src="Captura de pantalla 2025-06-02 125738.png" alt="Habitación moderna">
+    </div>
+  </section>
+
+  <section class="testimonios" id="testimonios">
+    <h2>Testimonios de Pacientes</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="card p-3 h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">👩 María G.</h5>
+            <p class="card-text">"El trato humano en Clínica Modys es excepcional. ¡Volvería sin dudarlo!"</p>
+            <div class="text-warning">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3 h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">👨 Pedro L.</h5>
+            <p class="card-text">"Me sentí cuidado desde el primer momento. Profesionales increíbles."</p>
+            <div class="text-warning">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3 h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">👩 Andrea M.</h5>
+            <p class="card-text">"El lugar es limpio, moderno y muy bien equipado. 100% recomendado."</p>
+            <div class="text-warning">★★★★☆</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Nombre completo" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Clínica Modys. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
